@@ -1,0 +1,10 @@
+version: '3'
+services:
+  backend_prod:
+    restart: always
+    image: backend_prod
+    build:
+      context: .
+      dockerfile: dockerfiles/prod.Dockerfile
+    ports:
+      - "80:80"
