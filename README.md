@@ -15,17 +15,17 @@ Made with:
 - Clone the repo `https://github.com/PApostol/RoboticHoover.git`.
 - Navigate to `RoboticHoover/` and open a terminal.
 
-# For development:
+For development:
 - Execute `python3 main.py` on terminal.
 - Flask will serve this on `localhost:5000`.
 
-# For production:
+For production:
 - Execute `sudo docker-compose -f prod.docker-compose.yml up --build --remove-orphans`.
 - Docker will serve this on `localhost`.
 
-# For data input, execute a `curl` command in a terminal (include port 5000 if in development):
+For data input, execute a `curl` command in a terminal (include port 5000 if in development):
 
-curl -i -d '{ "roomSize" : [5, 5], "coords" : [1, 2], "patches" : [ [1, 0], [2, 2], [2, 3] ], "instructions" : "NNESEESWNWW" }' -X POST http://localhost/api/execute/
+`curl -i -d '{ "roomSize" : [5, 5], "coords" : [1, 2], "patches" : [ [1, 0], [2, 2], [2, 3] ], "instructions" : "NNESEESWNWW" }' -X POST http://localhost/api/execute/`
 
 Output:
 `{"coords": [1, 3], "patches": 1}`
