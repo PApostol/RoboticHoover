@@ -5,7 +5,7 @@ Made with:
 * [Python](https://www.python.org/ "Python's Homepage")
 * [Flask (Python micro-framework for the web)](http://flask.pocoo.org/ "Flask's Homepage")  
 
-# Requirements:
+Requirements:
 - Python3
 - flask (pip install flask)
 - gunicorn (for production - pip install gunicorn)
@@ -32,7 +32,6 @@ Output:
 
 The output is shown on the terminal. Both input and output are saved in `storage/` folder with a timestamp.
 
-
 # Docker:
 -To install:
 
@@ -40,7 +39,8 @@ Docker CE: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 Docker-Compose: https://draculaservers.com/tutorials/install-use-docker-compose-ubuntu-18-04/
 
-#Terminal commands:
+Terminal commands:
+
 -containers currently running: `sudo docker ps -a`
 
 -stop all containers: `sudo docker kill $(sudo docker ps -q)`
@@ -49,7 +49,8 @@ Docker-Compose: https://draculaservers.com/tutorials/install-use-docker-compose-
 
 -remove all docker images: `sudo docker rmi $(sudo docker images -q)`
 
-#Notes:
+Notes:
+
 - Docker will download and handle all requirements for its containers to run properly. If you're using a proxy, Docker might stuck!
 - To double check that the back-end is running, navigate to `localhost/api/test/` in production, or `localhost:5000/api/test/` in development.
 
