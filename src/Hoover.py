@@ -102,7 +102,7 @@ def writeToDatabase(myinput, myoutput):
         connection = sqlite3.connect(path+'/database/hoover_db.db')
         cursor = connection.cursor()
 
-    parameters = (myinput, myoutput)
+    parameters = (str(myinput), str(myoutput))
     cursor.execute('INSERT INTO data VALUES (NULL, ?, ?)', parameters)
 
     connection.commit()

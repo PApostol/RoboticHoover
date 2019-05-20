@@ -1,6 +1,6 @@
 from flask import Flask, request
 from datetime import datetime
-from src.Hoover import Hoover, writeToStorage
+from src.Hoover import Hoover, writeToStorage, writeToDatabase
 from src.ValidationFunctions import validateRoomSize, validateInitialCoords, validatePatches, validateInstructions
 
 import ast, json
@@ -52,7 +52,7 @@ def execute():
 
         writeToStorage(json_str, output)
         writeToDatabase(json_str, output)
-        
+
         return app_json
 
  
