@@ -16,7 +16,7 @@ Requirements:
 
 # Instructions for deployment
 - Clone the repo `https://github.com/PApostol/RoboticHoover.git`.
-- Navigate to `RoboticHoover/` and open a terminal.
+- Navigate to `~/RoboticHoover/` and open a terminal.
 
 Depending on the state of your system, you might need to run the following commands on a terminal:
 - `sudo apt-get install python3-mysqldb`
@@ -31,13 +31,16 @@ For production:
 - Docker will spin a back-end container and serve the API on `localhost`.
 
 For data input, execute a `curl` command in a terminal (include port 5000 if in development):
+
 Input:
+
 `curl -i -d '{ "roomSize" : [5, 5], "coords" : [1, 2], "patches" : [ [1, 0], [2, 2], [2, 3] ], "instructions" : "NNESEESWNWW" }' -X POST http://localhost/api/execute/`
 
 Output:
+
 `{"coords": [1, 3], "patches": 1}`
 
-The output is shown on the terminal. Both input and output are saved in a `storage/` folder  as text files with a timestamp. They are also saved in an SQL database in `database/`.
+The output is shown on the terminal. Both input and output are saved in the `storage/` folder  as text files with a timestamp. They are also saved in an SQL database in `database/`.
 
 # Docker:
 -To install:
@@ -48,7 +51,7 @@ Docker-Compose: https://draculaservers.com/tutorials/install-use-docker-compose-
 
 Terminal commands:
 
--containers currently running: `sudo docker ps -a`
+-view existing containers: `sudo docker ps -a`
 
 -stop all containers: `sudo docker kill $(sudo docker ps -q)`
 

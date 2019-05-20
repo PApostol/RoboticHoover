@@ -1,11 +1,11 @@
 class InvalidRoomSize(Exception):
     def __init__(self, message):
-        super(InvalidRoomSize, self).__init__(message + ' is invalid')
+        super(InvalidRoomSize, self).__init__(message + ' is invalid!')
 
 
 class InvalidInitialCoords(Exception):
     def __init__(self, message):
-        super(InvalidInitialCoords, self).__init__(message + ' is invalid')
+        super(InvalidInitialCoords, self).__init__(message + ' is invalid!')
         
 
 class InvalidPatch(Exception):
