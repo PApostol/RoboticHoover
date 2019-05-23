@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, abort
 from datetime import datetime
 from src.Hoover import Hoover
 from src.WriteFunctions import writeToStorage, writeToDatabase
@@ -43,9 +43,9 @@ def execute():
                 myhoover.incrementPatchCount()
 
             myhoover.executeInstruction(step)
-
+        
     except Exception as err:
-        raise err
+        abort(400, str(err))
 
     else:
         output = myhoover.getOutput()

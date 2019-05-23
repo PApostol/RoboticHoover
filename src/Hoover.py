@@ -57,7 +57,7 @@ class Hoover(object):
 
 
     def showLocation(self):
-        print('x: {0}, y:{1}'.format(self.x, self.y))
+        print('x: {0}, y: {1}'.format(self.x, self.y))
 
 
     def getOutput(self):
