@@ -40,3 +40,19 @@ def writeToDatabase(myinput, myoutput):
 
     connection.commit()
     connection.close()
+
+
+
+def printFromDatabase(filename = '../database/hoover_db.db', command='SELECT * FROM data ORDER BY id'):
+
+    if os.path.isfile(filename):
+        connection = sqlite3.connect(filename)
+        cursor = connection.cursor()
+        
+        for row in cursor.execute(command):
+            print(row)
+
+        connection.close()
+    else:
+        print('Cannot find database ' + filename + '!')
+    

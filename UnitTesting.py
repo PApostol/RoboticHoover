@@ -1,7 +1,7 @@
-from Hoover import Hoover
-from WriteFunctions import writeToStorage, writeToDatabase
-from ValidationFunctions import validateRoomSize, validateInitialCoords, validatePatches, validateInstructions
-from Exceptions import InvalidRoomSize, InvalidInitialCoords, InvalidPatch, InvalidInstruction
+from src.Hoover import Hoover
+from src.WriteFunctions import writeToStorage, writeToDatabase
+from src.Exceptions import InvalidRoomSize, InvalidInitialCoords, InvalidPatch, InvalidInstruction
+from src.ValidationFunctions import validateRoomSize, validateInitialCoords, validatePatches, validateInstructions
 import unittest
 
 def execute(roomSize, coords, patches, instructions):

@@ -1,4 +1,4 @@
-from Exceptions import InvalidRoomSize, InvalidInitialCoords, InvalidPatch, InvalidInstruction
+from src.Exceptions import InvalidRoomSize, InvalidInitialCoords, InvalidPatch, InvalidInstruction
 
 def validateRoomSize(roomSize):
 
