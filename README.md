@@ -1,4 +1,4 @@
-## Back-end
+# Back-end
 
 Made with:
 
@@ -14,7 +14,7 @@ Requirements:
 - gunicorn (for production - `pip install gunicorn`)
 - docker & docker compose (for production - see below for guide)
 
-# Instructions for deployment
+## Instructions for deployment
 - Clone the repo `https://github.com/PApostol/RoboticHoover.git`.
 - Navigate to `~/RoboticHoover/` and open a terminal.
 
@@ -42,7 +42,7 @@ Output:
 
 The output is shown on the terminal. Both input and output are saved in the `storage/` folder  as text files with a timestamp. They are also saved in an SQL database in `database/`.
 
-# Docker:
+## Docker:
 -To install:
 
 Docker CE: https://docs.docker.com/install/linux/docker-ce/ubuntu/
